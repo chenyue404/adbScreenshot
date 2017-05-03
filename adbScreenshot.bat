@@ -1,13 +1,13 @@
 @echo off
 setlocal EnableDelayedExpansion
 REM  Copyrights: youngpen
-REM  version:1.2
+REM  version:1.3
 :start
-title adb½ØÍ¼
+title adbæˆªå›¾
 echo.
-echo adbÁ¬½ÓÊÖ»úºó£¬½ØÍ¼µ½µçÄÔÉÏ¡£
-echo µã»Ø³µ¿ªÊ¼,½«ÒÔÊ±¼äÃüÃû½ØÍ¼ÎÄ¼ş
-echo ÊäÈëÈÎÒâÎÄ×Ö/×ÖÄ¸Ìæ´úÎÄ¼şÃû£¬ÇëÎğÊäÈë¿Õ¸ñ£¬ÊäÈëexitÍË³ö
+echo adbè¿æ¥æ‰‹æœºåï¼Œæˆªå›¾åˆ°ç”µè„‘ä¸Šã€‚
+echo ç‚¹å›è½¦å¼€å§‹,å°†ä»¥æ—¶é—´å‘½åæˆªå›¾æ–‡ä»¶
+echo è¾“å…¥ä»»æ„æ–‡å­—/å­—æ¯æ›¿ä»£æ–‡ä»¶åï¼Œè¯·å‹¿è¾“å…¥ç©ºæ ¼ï¼Œè¾“å…¥exité€€å‡º
 echo.
 :set 
 SET time=%date:~0,4%%date:~5,2%%date:~8,2%%time:~0,2%%time:~3,2%%time:~6,2%
@@ -17,8 +17,12 @@ IF /I '%name%'=='exit' goto 1
 adb shell mkdir /sdcard/dcim/Screenshot
 adb shell screencap -p /sdcard/dcim/Screenshot/%name%.png
 adb pull /sdcard/dcim/Screenshot/%name%.png
+adb shell rm /sdcard/dcim/Screenshot/%name%.png
 cls
-
+echo.
+echo æ–‡ä»¶%name%.jpgå·²å¤åˆ¶åˆ°å½“å‰ç›®å½•
+echo.â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”
+SET time=
 goto start
 
 :1
