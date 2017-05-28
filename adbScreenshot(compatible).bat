@@ -1,6 +1,6 @@
 @echo off
 setlocal EnableDelayedExpansion
-REM  Copyrights: youngpen
+REM  Copyrights: youngpen https://github.com/youngpen/
 REM  version:1.3
 title adb截图
 echo.
